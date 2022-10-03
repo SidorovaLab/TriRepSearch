@@ -1951,21 +1951,3 @@ def rep_search(bioc_mol_type,
          + 'min\n')
 
     return final_dfs_list
-
-min_len = 15 ; max_len = 16
-
-for n in [int(item) for item in np.linspace(min_len, max_len, max_len - min_len + 1)]:
-
-    try:
-        
-        x = rep_search(bioc_mol_type = "Amino acid",
-                       reps = ['D'],
-                       min_size = n,
-                       max_size = 1000,
-                       gap_allowance = 0,
-                       gene_flank_size = 500)
-    
-    except:
-        
-        print('\nNo genes found')
-        pass
